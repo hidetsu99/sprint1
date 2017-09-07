@@ -1,0 +1,35 @@
+/*GLOBALS*/
+*{
+  box-sizing: border-box;
+}
+ul,li{
+  list-style: none;
+}
+.container{
+  max-width: 768px;
+  overflow: hidden;
+}
+/* HEADER*/
+header{
+  width: 100%;
+  position: absolute;
+  max-width: 768px;
+  background-color: red;
+  text-align: center;
+}
+.logo_header{
+  display: inline-block;
+}
+.fa-search{
+  float: right;
+  position: relative;
+  right: 10px;
+}
+
+.login{
+  display: none;
+}
+/*BANNER*/
+.banner_img{
+  width: 100%;
+}
