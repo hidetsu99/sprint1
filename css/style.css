@@ -12,24 +12,51 @@ ul,li{
 /* HEADER*/
 header{
   width: 100%;
-  position: absolute;
   max-width: 768px;
-  background-color: red;
   text-align: center;
 }
 .logo_header{
   display: inline-block;
+  padding-top: 4px;
 }
 .fa-search{
   float: right;
-  position: relative;
-  right: 10px;
-}
-
-.login{
+  padding: 9.43px 4px 9.43px 0px;
   display: none;
 }
+.fa-bars{
+  float: left;
+  padding: 9.43px 0px 9.43px 12px;
+}
+.login{
+  display: none;
+  float: right;
+}
 /*BANNER*/
+.banner{
+  position: static;
+}
 .banner_img{
   width: 100%;
+  position: relative;
+  z-index: 900;
+}
+.search_buttom{
+position: relative;
+z-index: 1000;
+}
+/*BODY*/
+.product,
+.body_title{
+  text-align: center;
+}
+.product_div{
+  border: 1px solid #2ac979;
+  padding: 0;
+  width: 404px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.img_products{
+  width: 400px;
 }
