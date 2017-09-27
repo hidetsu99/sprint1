@@ -19,12 +19,12 @@
     </header>
     <!--BANNER-->
     <div class="banner">
-    <form class="form-group" action="formulario.html" method="post">
+    <form class="form-group" action="formulario.php" method="gets">
       <input type="submit" name="registrarse" value="registrarse" class="login">
     </form>
-      
+
       <input type="submit" name="iniciar sesion" value="iniciar sesion" class="singup">
-      
+
       <img src="img/banner1.jpg" alt="banner" class="banner_img">
     </div>
     <!--PRODUCTS-->
@@ -248,7 +248,7 @@
     <footer class="main-footer">
       <ul class="ul_footer">
         <div class="help-footer">
-          <li class="url_footer"><a href="faq.html">FAQ</a></li>
+          <li class="url_footer"><a href="faq.php">FAQ</a></li>
           <li class="url_footer"><a href="#">Terms y Conditions</a></li>
           <li class="url_footer"><a href="#">Help</a></li>
         </div>

@@ -17,7 +17,7 @@ li,a{
 body{
   margin-top: 0;
   margin-bottom: 0;
-  margin: 0
+  margin: 0;
 }
 /* HEADER*/
 header{
@@ -25,6 +25,7 @@ header{
   /*le saque el max-width*/
   text-align: center;
 }
+
 .logo_header{
   display: inline-block;
   padding-top: 4px;
@@ -67,13 +68,6 @@ header{
   padding-left: 20px;
   margin-bottom: 3px;
 }
-.pregunt
-
-
-
-
-
-
 /*FOOTER*/
 .main-footer {
   text-decoration: none;/*saca la linea azul*/
@@ -96,4 +90,111 @@ header{
 }
 .icons_footer:nth-child(3){
   padding-right: 0;
+}
+/*ASK*/
+.respuesta{
+  margin-bottom: 12px;
+  text-align: center;
+  padding-left: 0;
+}
+.pregunta{
+  margin-top: 9px;
+  text-align: center;
+}
+.preguntas:last-child{
+  border-bottom: none;
+}
+/*MOBILE 2*/
+@media (min-width: 425px) {
+.product{
+  width: 47%;
+  margin-right: 1%
+}
+.product:nth-child(even){
+  margin-right: 0;
+}
+
+/*TABLET*/
+}
+@media (min-width: 645px) {
+  .br_footer{
+    display: none
+  }
+  .help-footer{
+    display: inline-block;
+    padding-left: 20px;
+    float: left;
+  }
+  .icons-footer{
+    display: inline-block;
+    padding-right: 20px;
+    float: right;
+  }
+  .icons_footer{
+    float: right;
+  }
+  .main-footer{
+    height: 50px;
+    margin-top:74px;
+  }
+  .icons_footer:nth-child(3){
+    padding-right: 20px;
+  }
+  .icons_footer:nth-child(1){
+    padding-right: 0px;
+  }
+
+  /*ask*/
+  .pregunta{
+    text-align: left;
+  }
+  .respuesta{
+    text-align: left;
+  }
+
+}
+/*DESKTOP*/
+@media (min-width:992px) {
+/*HEADER*/
+header{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50px;
+}
+.fa-search{
+  padding: 9.43px 4px 7.43px 0px;
+}
+.fa-bars{
+  display: none;
+}
+.logo_header{
+  float: left;
+  width: 215px;
+}
+/*BANNER*/
+.banner_img{
+  max-height: 800px;
+}
+/*PRODUSCTS*/
+.product{
+  width: 31%;
+}
+.product:nth-child(2n){
+  margin-right: 1%;
+}
+.product:nth-child(3n){
+  margin-right: 0;
+}
+.section_body{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/*FAQ askeds*/
+.asks{
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
 }
