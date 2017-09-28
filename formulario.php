@@ -1,4 +1,4 @@
-<?php include("controllers/controller.php"); ?>
+<?php require("controllers/controller.php") ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,19 +29,18 @@
       <div class="row">
   		  <div class="form-group col-md-2 col-md-offset-4">
   		    <label for="nombre"></label>
-          <input type="text" class="form-control" id="nombre" name="user" placeholder="Nombre" value="<?php  if (!isset($errores['user'])) {
-							  echo $_POST['user'];
-							} ?>">
-					<?php
-					if (isset($errores['user'])) {
-					  echo $errores['user'];
-					}?>
+          <input type="text" class="form-control" id="nombre" name="user" placeholder="Nombre" value="<?php
+					if (!isset($errores['user']) && isset($_POST['user'])) {
+					  echo $_POST['user'];
+					}?>">
+					<?php if (isset($errores['user'])) {echo $errores['user'];}?>
         </div>
         <div class="form-group col-md-2">
          <label for="apellido"></label>
-            <input type="text" class="form-control" id="nombre" placeholder="Apellido" name='lastName' value="<?php  if (!isset($errores['lastName'])) {
-								  echo $_POST['lastName'];
-								} ?>">
+            <input type="text" class="form-control" id="nombre" placeholder="Apellido" name='lastName' value="<?php
+						  if (!isset($errores['lastName']) && isset($_POST['lastName'])) {
+						  echo $_POST['lastName'];
+						} ?>">
 						<?php  if (isset($errores['lastName'])) {
 						  echo $errores['lastName'];
 						} ?>
@@ -49,13 +48,14 @@
       </div>
       <div class="row">
           <div class="form-group col-md-4 col-md-offset-4">
-            <input type="text" class="form-control" id="email" placeholder="Ingrese su correo electronico" name='email' value="<?php  if (!isset($errores['email'])) {
+            <input type="text" class="form-control" id="email" placeholder="Ingrese su correo electronico" name='email' value="<?php if (!isset($errores['email'])&&isset($_POST['email'])) {
 								  echo $_POST['email'];
 								} ?>">
 						<?php if (isset($errores['email'])) {
 								  echo $errores['email'];
 								} ?>
 					</div>
+
       </div>
       <div class="row">
         <div class="form-group col-md-2 col-md-offset-4">
@@ -97,6 +97,7 @@
         </div>
       </div>
     </form>
+							<?php var_dump($_POST); ?>
 		<!-- FOOOTER -->
 		<footer class="main-footer">
 			<ul class="ul_footer">
