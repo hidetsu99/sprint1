@@ -1,4 +1,5 @@
 <?php
+session_start();
 /* El cliente pide que funcione la registración del sitio pudiendo guardar los usuarios en un archivo JSON.
 
 - Debe existir una validación del lado del servidor.
@@ -29,6 +30,10 @@
     } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     	$errores['email'] = "El email no es valido";
     }
+    $genero = isset($_POST['genero']);
+    if (empty($genero)) {
+      $errores['genero'] = "Especifica tu genero";
+    }
     $password = trim($_POST['password']);
     if (empty($password)) {
     	$errores['password'] = "La contraseña es obligatoria";
@@ -43,12 +48,14 @@
     }
 
   // CREA UNA IMG
-  $imgName = uniqid();
+  $imgName = $_POST['lastName'] . $_POST['user'];
   $imgAvatar = guardarImagen('avatar', $imgName, 'db/imgUsers/');
   // SIRVE PARA CREAR EL USUARIO
   $usuario = [
   	'user' => $user,
+    'lastName' => $lastName,
   	'email' => $email,
+    'genero' => $genero,
   	'password' => password_hash($password, PASSWORD_DEFAULT),
     'confirm' => password_hash($confirm, PASSWORD_DEFAULT),
     'img' => $imgAvatar
@@ -75,9 +82,23 @@
       return $imgName.'.'.$extension;
     }
   }
+// SESSION
+if (isset( $_POST['user'])) {
+  $_SESSION['user'] = $_POST['user'];
+}
+if (isset($_FILES['avatar'])) {
+  $_SESSION['avatar'] = $_FILES['avatar'];
+}
+// PONER IMG EN FORM
+//function ponerImagen($nombreImg, $pathImg){
+$jsonphp = json_decode(file_get_contents(ROOT1), true);
+foreach ($jsonphp as $key) {
+  if ($jsonphp['img'] = isset($usuario['img'])) {
+    echo "hol";
+  //move_uploaded_file($_FILES[$inputName]['tmp_name'],$path.$imgName.'.'.$extension);
+  }
+  }
 
-
-
-
-
+  //}
+//}
  ?>

@@ -1,4 +1,5 @@
-<?php require("controllers/controller.php") ?>
+<?php
+require("controllers/controller.php")?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +15,16 @@
 		<header>
       <i class="fa fa-bars fa-2x" aria-hidden="true" data-toggle="modal" data-target="#faBars"></i>
       <img src="img/logo.jpg" alt="logo" class="logo_header">
-      <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+      <?php if (!isset($_SESSION['user'])): ?>
+      	<i class="fa fa-search fa-2x" aria-hidden="true"></i>
+			<?php endif; ?>
+			<?php var_dump($_SESSION['user']); ?>
+			<?php //if (isset($_SESSION['avatar'])) {
+
+
+
+
+			//} ?>
     </header>
 	</div>
 	<!--CONTAINER-->
@@ -55,17 +65,19 @@
 								  echo $errores['email'];
 								} ?>
 					</div>
-
       </div>
       <div class="row">
         <div class="form-group col-md-2 col-md-offset-4">
          <label for="genero"></label>
-          <input type="radio" value="masculino" name="genero"> Hombre
+        	<input type="radio" value="masculino" name="genero"> Hombre
+					<?php if (isset($errores['genero'])) {
+						echo "<br>" . $errores['genero'];
+					} ?>
 				</div>
         <div class="form-group col-md-2">
-          <input type="radio" value="femenino" name="genero"> Mujer <br>
+          <input type="radio" value="femenino" name="genero"> Mujer
 				</div>
-      </div>
+			</div>
       <div class="row">
         <div class="form-group col-md-2 col-md-offset-4">
           <label for="contraseña"></label>
@@ -93,11 +105,11 @@
   		</div>
       <div class="row">
         <div class="form-group col-md-4 col-md-offset-4 ">
-          <button type="submit" class="btn btn-primary btn-block">Registrarse</button> <!--solucionar!-->
+          <a href="index.php"><button type="submit" class="btn btn-primary btn-block">Registrarse</button></a> <!--solucionar!-->
         </div>
       </div>
     </form>
-							<?php var_dump($_POST); ?>
+ <?php var_dump($usuario['img']); ?>
 		<!-- FOOOTER -->
 		<footer class="main-footer">
 			<ul class="ul_footer">

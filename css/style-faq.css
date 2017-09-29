@@ -49,7 +49,9 @@ header{
   padding-right: 5px;
   border-right: solid 1px black;
 }
-
+.userphp{
+  color: red;
+}
 
 /*Body*/
 .ruta-pag{
