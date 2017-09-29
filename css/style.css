@@ -14,6 +14,7 @@ li,a{
   overflow: hidden;
   background-image: url(../img/background.jpg);
   width: 100%;
+  max-width: 320px;
 }
 body{
   margin-top: 0;
@@ -189,6 +190,9 @@ header{
 /*TABLET*/
 }
 @media (min-width: 645px) {
+  .container{
+    max-width: 992px;
+  }
   .login{
     margin-left: 55%;
     margin-top: 27%;
@@ -231,6 +235,9 @@ header{
 }
 /*DESKTOP*/
 @media (min-width:992px) {
+  .container{
+    max-width: 100%;
+  }
   .login{
     margin-left: 55%;
     margin-top: 27%;

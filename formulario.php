@@ -18,7 +18,6 @@ require("controllers/controller.php")?>
       <?php if (!isset($_SESSION['user'])): ?>
       	<i class="fa fa-search fa-2x" aria-hidden="true"></i>
 			<?php endif; ?>
-			<?php var_dump($_SESSION['user']); ?>
 			<?php //if (isset($_SESSION['avatar'])) {
 
 
@@ -109,7 +108,6 @@ require("controllers/controller.php")?>
         </div>
       </div>
     </form>
- <?php var_dump($usuario['img']); ?>
 		<!-- FOOOTER -->
 		<footer class="main-footer">
 			<ul class="ul_footer">

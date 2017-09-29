@@ -15,7 +15,6 @@
       <i class="fa fa-bars fa-2x" aria-hidden="true" data-toggle="modal" data-target="#faBars"></i>
       <img src="img/logo.jpg" alt="logo" class="logo_header">
       <i class="fa fa-search fa-2x" aria-hidden="true"></i>
-
     </header>
     <!--BANNER-->
     <div class="banner">
