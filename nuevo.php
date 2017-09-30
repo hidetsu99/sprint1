@@ -1,3 +1,4 @@
+<?php require("signup.php") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/nuevo.css">
+  <link rel="stylesheet" href="nuevo.css">
   <title>Nombre</title>
 </head>
 <body>
@@ -23,12 +24,12 @@
       <form class="form-group" action="nuevo.php" method="post" enctype="multipart/form-data">
         <div>
           <button type="submit" class="singup"> Iniciar Sesion</button>
-          <input type="email" name="email" class="email" placeholder="email">
-          <input type="password" name="password" class="password" placeholder="clave">
+          <input type="email" name="email" class="email" placeholder="Email">
+          <input type="password" name="pass" class="password" placeholder="Clave">
 
         </div>
       </form>
-      
+
     </div>
     <!--PRODUCTS-->
     <div class="products_body">

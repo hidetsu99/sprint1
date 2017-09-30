@@ -18,37 +18,15 @@ if (file_exists(ROOT1)) {
 } else {
   $users = [];
 }
-foreach ($users as $key) {
+if (isset($users)) {
   $i = 0;
-  $i++;
-  if ($users[$i]['email'] == $_POST['email'] && password_verify($_POST['pass'],$users[$i]['password'])) {
-    echo "hola";
+  foreach ($users as $key) {
+    if ($users[$i]['email'] == isset($_POST['email']) && password_verify($_POST['pass'],$users[$i]['password'])) {
+      $_SESSION['online'] = "On line";
+      header('Location: nuevo.php');
+      break;
+    }
+    $i++;
   }
 }
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <i class="fa fa-bars fa-2x" aria-hidden="true" data-toggle="modal" data-target="#faBars"></i>
-        <img src="img/logo.jpg" alt="logo" class="logo_header">
-        <i class="fa fa-search fa-2x" aria-hidden="true"></i>
-      </header>
-      <div class="signup">
-        <form class="signupform" action="signup.php" method="post">
-          <label for="">Email</label>
-          <input type="email" name="email" value="">
-          <label for="">Contraseña</label>
-          <input type="password" name="pass" value="">
-          <input type="submit" name="submit" value="">
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
-<?php var_dump($users); ?>
